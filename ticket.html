@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mais Vagas</title>
-  <script src="js/JsBarcode.all.min.js"></script>
   <link href="ticket.css" rel="stylesheet">
 </head>
 <body>
@@ -22,21 +21,20 @@
     </div>
   </div>
 
-  <!-- JsBarcode para gerar o código de barras -->
-  <script src="https://cdn.jsdelivr.net/jsbarcode/3.11.5/JsBarcode.all.min.js"></script>
-  <script>
-     // Conteúdo do código de barras (pode ser a placa ou um ID gerado)
-     window.onload = function () {
-    const codigo = "ABC1D23-1435";
+  <!-- JsBarcode: use apenas uma vez -->
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
 
-    JsBarcode("#barcode", codigo, {
-      format: "CODE128",
-      lineColor: "#000",
-      width: 2,
-      height: 60,
-      displayValue: false
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const codigo = "ABC1D23-1435";
+      JsBarcode("#barcode", codigo, {
+        format: "CODE128",
+        lineColor: "#000",
+        width: 2,
+        height: 60,
+        displayValue: false
+      });
     });
-};
   </script>
 </body>
 </html>
