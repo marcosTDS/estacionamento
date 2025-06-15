@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mais Vagas</title>
+  <script src="js/JsBarcode.all.min.js"></script>
+  <link href="ticket.css" rel="stylesheet">
+</head>
+<body>
+     
+  <div class="ticket">
+    <h2>Ticket de Estacionamento</h2>
+    <div class="ticket-info">
+      <p><strong>Nome:</strong> João da Silva</p>
+      <p><strong>Veículo:</strong> Toyota Corolla</p>
+      <p><strong>Placa:</strong> ABC1D23</p>
+      <p><strong>Hora de Entrada:</strong> 14:35 - 14/06/2025</p>
+    </div>
+    <div class="barcode">
+      <svg id="barcode"></svg>
+    </div>
+  </div>
+
+  <!-- JsBarcode para gerar o código de barras -->
+  <script src="https://cdn.jsdelivr.net/jsbarcode/3.11.5/JsBarcode.all.min.js"></script>
+  <script>
+     // Conteúdo do código de barras (pode ser a placa ou um ID gerado)
+     window.onload = function () {
+    const codigo = "ABC1D23-1435";
+
+    JsBarcode("#barcode", codigo, {
+      format: "CODE128",
+      lineColor: "#000",
+      width: 2,
+      height: 60,
+      displayValue: false
+    });
+};
+  </script>
+</body>
+</html>

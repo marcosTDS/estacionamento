@@ -1,0 +1,98 @@
+ * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+       background: #ECF0F1;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      color: #2D3436;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2C3E50;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, datalist, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #2C3E50;
+      color: #1ABC9C;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #34495E;
+    }
+
+/* Botão de voltar */
+.botao-voltar {
+  display: none; /* Oculto por padrão */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  color: #1ABC9C;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: none;
+  z-index: 999;
+  width: 10%;
+}
+
+/* Mostrar apenas em telas menores que 1024px */
+@media screen and (max-width: 1023px) {
+  .botao-voltar {
+  display: block;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: transparent;
+  color: #1ABC9C;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  
+  }
+}
+
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+    }

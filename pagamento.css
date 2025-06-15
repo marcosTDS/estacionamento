@@ -1,0 +1,161 @@
+ 
+    body {
+      font-family: Arial, sans-serif;
+       background: #ECF0F1;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .tab-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .tab-buttons button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      background: #2C3E50;
+      color: #1ABC9C;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tab-buttons button:hover {
+      background: #34495E;
+    }
+
+    .flip-container {
+      perspective: 1000px;
+    }
+
+    .flipper {
+      position: relative;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      min-height: 400px;
+    }
+
+    .flipped .flipper {
+      transform: rotateY(180deg);
+    }
+
+    .tab-content {
+      position: absolute;
+      width: 100%;
+      backface-visibility: hidden;
+      top: 0;
+      left: 0;
+      padding: 20px 0;
+    }
+
+    .front {
+      z-index: 2;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: none;
+    }
+
+    .pix-box {
+      text-align: center;
+    }
+
+    .pix-code {
+      background: #eee;
+      padding: 10px;
+      word-break: break-all;
+      margin-top: 10px;
+    }
+
+    .copy-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #2C3E50;
+      color: #1ABC9C;
+      border: none;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background: #34495E;
+    }
+
+    .btn-container {
+      text-align: center;
+    }
+
+    .botao-voltar {
+  display: none; /* Oculto por padrão */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: transparent;
+  color: #2C3E50;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: none;
+  z-index: 999;
+  width: 10%;
+}
+
+/* Mostrar apenas em telas menores que 1024px */
+@media screen and (max-width: 1023px) {
+  .botao-voltar {
+  display: block;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: transparent;
+  color: #2C3E50;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  
+  }
+}
+
+    @media (max-width: 600px) {
+      .tab-buttons button {
+        font-size: 14px;
+      }
+
+      .copy-btn {
+        width: 100%;
+      }
+
+      .btn-container {
+        text-align: center;
+      }
+    }
+  

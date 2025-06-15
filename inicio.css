@@ -1,0 +1,170 @@
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ECF0F1;
+    font-family: 'Segoe UI', 'Poppins', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    position: relative;
+}
+
+/* Logo */
+header img {
+    width: 120px;
+    height: auto;
+}
+
+/* Navegação */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+     color: #1ABC9C;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+   transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover {
+    transform: scale(1.1);
+}
+
+/* Menu hamburguer */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Card com botões */
+.card {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.button {
+    background-color: #2C3E50;
+    color: #1ABC9C;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Telas até 1024px (tablets e menores notebooks) */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .button {
+        width: 220px;
+        font-size: 17px;
+    }
+
+    header img {
+        width: 100px;
+    }
+}
+
+/* Telas até 768px (smartphones) */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+  position: fixed;
+  top: 70px; /* abaixo do header */
+  right: -200px; /* fora da tela inicialmente */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.nav-links a {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Quando o menu é ativado */
+.nav-links.active {
+  right: 0;
+}
+
+/* Animação por ordem */
+
+
+.nav-links.active a:nth-child(1) {
+  transition-delay: 0.1s;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.nav-links.active a:nth-child(2) {
+  transition-delay: 0.2s;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.nav-links.active a:nth-child(3) {
+  transition-delay: 0.3s;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+    .menu-icon {
+        display: block;
+    }
+
+    .card {
+        margin-top: 80px;
+        padding: 0 20px;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 300px;
+        font-size: 16px;
+    }
+
+    header img {
+        width: 90px;
+    }
+}

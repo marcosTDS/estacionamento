@@ -1,0 +1,174 @@
+/* Reset e base */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ECF0F1;
+  font-family: 'Poppins', Arial, sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Logo */
+.logo {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo img {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Barra de pesquisa */
+.pesquisa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.pesquisa input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  border-radius: 10px;
+}
+
+.pesquisa button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #2C3E50;
+  color: #1ABC9C;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  transition: background 0.3s ease;
+}
+
+.pesquisa button:hover {
+  background: #333;
+}
+
+/* Resultados */
+.container-resultados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card */
+.estacionamento {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.estacionamento img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.info h3 {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.info button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  font-size: 16px;
+  background: #454545;
+  color: #FFC107;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.info button:hover {
+  background: #333;
+}
+
+/* Botão de voltar */
+.botao-voltar {
+  display: none; /* Oculto por padrão */
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #1ABC9C;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+ 
+}
+
+/* Mostrar apenas em telas menores que 1024px */
+@media screen and (max-width: 1023px) {
+  .botao-voltar {
+    display: block;
+  }
+}
+
+
+/* Tablets em diante */
+@media screen and (min-width: 768px) {
+  .pesquisa {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .pesquisa input {
+    margin-right: 10px;
+  }
+
+  .container-resultados {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .estacionamento {
+    width: 45%;
+    max-width: 320px;
+  }
+}
+
+/* Notebooks e desktops maiores */
+@media screen and (min-width: 1024px) {
+  .estacionamento {
+    width: 300px;
+  }
+}

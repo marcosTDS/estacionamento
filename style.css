@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #ECF0F1;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Centraliza a logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    max-width: 80%;
+}
+
+/* Container principal */
+.login-senha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilização dos campos */
+.login,
+.senha {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #2D3436;
+   
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+/* Botões */
+button {
+    background: #2C3E50;
+    border: none;
+    color: #1ABC9C;
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 8px;
+    margin: 20px auto;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #333;
+}
+
+.cadastrar {
+    margin-top: 10px;
+}
+
+.ou {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Remove sublinhado de links nos botões */
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Para telas menores (smartphones) */
+@media (max-width: 600px) {
+    .logo img {
+        width: 120px;
+    }
+
+    input {
+        font-size: 16px;
+        height: 40px;
+    }
+
+    button {
+        font-size: 16px;
+        height: 38px;
+    }
+
+    .login,
+    .senha {
+        font-size: 16px;
+    }
+}
+
+/* Para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .logo img {
+        width: 180px;
+    }
+
+    .login,
+    .senha {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+/* Para notebooks e telas maiores */
+@media (min-width: 1025px) {
+    .logo img {
+        width: 200px;
+    }
+
+    .login,
+    .senha {
+        font-size: 22px;
+    }
+
+    input {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 20px;
+    }
+}

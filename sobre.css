@@ -1,0 +1,82 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background:  #ECF0F1;
+    color: #2D3436;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container geral */
+.container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Logo */
+.logo img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+/* Texto de apresentação */
+.descricao {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.descricao h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+     color: #2D3436;
+}
+
+.descricao p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .descricao h1 {
+        font-size: 1.5rem;
+    }
+
+    .descricao p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .descricao {
+        padding: 15px;
+    }
+
+    .logo img {
+        max-width: 180px;
+    }
+
+    .descricao h1 {
+        font-size: 1.3rem;
+    }
+
+    .descricao p {
+        font-size: 0.9rem;
+    }
+}

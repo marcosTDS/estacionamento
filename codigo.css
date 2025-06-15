@@ -1,0 +1,156 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background:  #ECF0F1;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    margin-top: 30px;
+     text-align: center;
+}
+
+.logo img {
+    width: 150px;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Texto de verificação */
+.codigo {
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 20px;
+    color: #2D3436;
+}
+
+.codigo h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.texto h2 {
+    font-size: 18px;
+}
+
+/* Input */
+.input {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 280px;
+    padding: 0 20px;
+}
+
+.input input {
+    width: 100%;
+    height: 42px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+/* Botão */
+.botao {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+button {
+    width: 100%;
+    max-width: 180px;
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #2C3E50;
+    color: #1ABC9C;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Smartphones pequenos */
+@media (max-width: 480px) {
+    .logo img {
+        width: 120px;
+    }
+
+    .codigo h2,
+    .texto h2 {
+        font-size: 16px;
+        color: black;
+    }
+
+    .input input {
+        font-size: 16px;
+        height: 40px;
+    }
+
+    button {
+        font-size: 16px;
+        height: 42px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .logo img {
+        width: 180px;
+    }
+
+    .codigo h2,
+    .texto h2 {
+        font-size: 18px;
+        color: black;
+    }
+
+    .input input {
+        font-size: 17px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+/* Notebooks e maiores */
+@media (min-width: 1025px) {
+    .logo img {
+        width: 200px;
+    }
+
+    .codigo {
+        margin-top: 60px;
+        color: black;
+    }
+
+    button {
+        font-size: 20px;
+    }
+}
