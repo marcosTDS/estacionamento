@@ -139,6 +139,14 @@ html, body {
 @media screen and (max-width: 1023px) {
   .botao-voltar {
     display: block;
+    position: fixed;
+  top: 15px;
+  left: 15px;
+  background: transparent;
+  color: #1ABC9C;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
   }
 }
 
